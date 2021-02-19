@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>
+    ports:
+      - 1401:1433
+    restart: "unless-stopped"
+  serverexample:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: serverexample
+    container_name: server
+    volumes:
+      - ./core/target/web:/web
+    ports:
+      - "5050:5050"
+    restart: "no"
+#    mongodb:
+    #    image: mongo:latest
+    #    container_name: mongodb
+    #    environment:
+    #      - PUID=1000
+    #      - PGID=1000
+    #    volumes:
+    #      - ./mongodb:/data/db
+    #    ports:
+    #      - "27017:27017"
+    #    restart: "unless-stopped"
