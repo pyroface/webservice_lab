@@ -8,8 +8,8 @@ If you want to change the code and errors occur remember to use the "clean"
 
 After you've built
 Open Terminal and do:
-	cd core\target
-Then run this line in the terminal
-        java --module-path core-1.0-SNAPSHOT.jar;modules -m core/x.snowroller.ServerExample
+cd core\target
+Then run this line in the terminal:
+java --module-path core-1.0-SNAPSHOT.jar;modules -m core/x.snowroller.ServerExample
 
 Remember to change the persistance.xml file to it matches the database
