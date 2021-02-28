@@ -1,5 +1,5 @@
 This is made with Maven
-The primary code that works with JPA and the database is in ServerExample
+The primary code that works with JPA and the database is in core/src/main/ServerExample
 
 Build with mvn package or press the maven tab on the right and then
 parent-project > Lifecycle > package
